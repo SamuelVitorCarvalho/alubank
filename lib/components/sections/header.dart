@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../themes/theme_colors.dart';
+
 class Header extends StatelessWidget {
   const Header({super.key});
 
@@ -10,15 +12,11 @@ class Header extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: <Color>[
-            Color.fromRGBO(103, 99, 234, 1),
-            Color.fromRGBO(155, 105, 254, 1),
-            Color.fromRGBO(195, 107, 255, 1),
-          ]
+          colors: ThemeColors.headerGradient,
         ),
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(10)),
       ),
-      child: const Padding(
+      child: Padding(
         padding: EdgeInsets.fromLTRB(16, 80, 16, 16),
         child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,26 +27,20 @@ class Header extends StatelessWidget {
                   Text.rich(
                     TextSpan(
                       text: 'R\$',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
                       children: <TextSpan>[
                         TextSpan(
                           text: '1000,00',
-                          style: TextStyle(
-                              fontSize: 28, fontWeight: FontWeight.bold),
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ],
                     ),
                   ),
-                  Text(
-                    'Balanço da conta',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
+                  Text('Balanço da conta'),
                 ],
               ),
               Icon(
                 Icons.account_circle,
                 size: 42,
-                color: Colors.white,
               )
             ]),
       ),
