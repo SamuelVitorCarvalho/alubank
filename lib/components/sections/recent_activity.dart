@@ -11,14 +11,14 @@ class RecentActivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(16),
       child: BoxCard(boxContent: _RecentActivityContent()),
     );
   }
 }
 
 class _RecentActivityContent extends StatelessWidget {
-  const _RecentActivityContent({super.key});
+  const _RecentActivityContent();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class _RecentActivityContent extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Saída'),
+                    const Text('Saída'),
                     Text(
                       '\$9900.97',
                       style: Theme.of(context).textTheme.bodyLarge,
@@ -55,7 +55,7 @@ class _RecentActivityContent extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Entrada'),
+                    const Text('Entrada'),
                     Text(
                       '\$1532.26',
                       style: Theme.of(context).textTheme.bodyLarge,
@@ -75,12 +75,12 @@ class _RecentActivityContent extends StatelessWidget {
           minHeight: 8,
           borderRadius: BorderRadius.circular(5),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 8, bottom: 8),
+        const Padding(
+          padding: EdgeInsets.only(top: 8, bottom: 8),
           child: ContentDivision(),
         ),
-        Text('Esse mês você gastou \$1500.00 com jogos. Tente abaixar esse '
-            'custo!'),
+        const Text('Esse mês você gastou \$1500.00 com jogos. Tente abaixar '
+            'esse custo!'),
         TextButton(
             onPressed: () {},
             child: const Text(
