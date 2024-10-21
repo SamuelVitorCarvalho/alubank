@@ -1,10 +1,8 @@
-import 'package:alubank/components/box_card.dart';
-import 'package:alubank/components/color_dot.dart';
 import 'package:alubank/components/sections/account_actions.dart';
+import 'package:alubank/components/sections/account_points.dart';
 import 'package:alubank/components/sections/header.dart';
 import 'package:alubank/components/sections/recent_activity.dart';
 import 'package:flutter/material.dart';
-import '../themes/theme_colors.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -14,9 +12,10 @@ class Home extends StatelessWidget {
     return Scaffold(
         body: Column(
           children: <Widget>[
-            const Header(),
+            Header(),
             RecentActivity(),
-            AccountActions()
+            AccountActions(),
+            AccountPoints(),
           ],
         ),
       );
