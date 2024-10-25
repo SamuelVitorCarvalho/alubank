@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 ThemeData MyTheme = ThemeData(
   primarySwatch: ThemeColors.primaryColor,
   primaryColor: ThemeColors.primaryColor,
+  cardColor: ThemeColors.card,
   brightness: Brightness.dark,
   fontFamily: 'Raleway',
   textTheme: const TextTheme(
